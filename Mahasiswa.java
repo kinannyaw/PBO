@@ -5,26 +5,30 @@
 
 /**
  *
- * @author ACER
+ * @author PC
  */
 public class Mahasiswa {
-    protected String nama;
-    protected String nim;
+    protected String Nama, NIM, Universitas;
+    protected String Jurusan, Prodi, Angkatan;
 
-    public Mahasiswa(String nama, String nim) {
-        this.nama = nama;
-        this.nim = nim;
+    public void setData(String Value1, String Value2,
+            String Value3, String Value4,
+            String Value5, String Value6) {
+
+        Nama = Value1;
+        NIM = Value2;
+        Universitas = Value3;
+        Jurusan = Value4;
+        Prodi = Value5;
+        Angkatan = Value6;
     }
 
-    // OVERLOADING 1: Hitung UKT Standar (1 Parameter)
-    public double hitungUKT(double uktNominal) {
-        return uktNominal;
-    }
-
-    // OVERLOADING 2: Hitung UKT dengan Denda (2 Parameter)
-    public double hitungUKT(double uktNominal, double denda) {
-        return uktNominal + denda;
+    public void printData() {
+        System.out.println("Nama: " + Nama);
+        System.out.println("NIM: " + NIM);
+        System.out.println("Universitas: " + Universitas);
+        System.out.println("Jurusan: " + Jurusan);
+        System.out.println("Prodi: " + Prodi);
+        System.out.println("Angkatan: " + Angkatan);
     }
 }
-
-

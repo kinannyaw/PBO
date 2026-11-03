@@ -5,18 +5,21 @@
 
 /**
  *
- * @author ACER
+ * @author PC
  */
 public class MahasiswaBeasiswa extends Mahasiswa {
+    protected String JenisBeasiswa;
+    protected double NominalBeasiswa;
 
-    public MahasiswaBeasiswa(String nama, String nim) {
-        super(nama, nim);
+    public void setDataBeasiswa(String Value1, double Value2) {
+        JenisBeasiswa = Value1;
+        NominalBeasiswa = Value2;
     }
 
-    // OVERRIDING: Mahasiswa Beasiswa Bebas UKT (Rp 0)
-    @Override
-    public double hitungUKT(double uktNominal) {
-        return 0;
+    public void printDataBeasiswa() {
+        printData();
+
+        System.out.println("Jenis Beasiswa: " + JenisBeasiswa);
+        System.out.printf("Nominal Beasiswa: Rp%,.0f%n", NominalBeasiswa);
     }
 }
-
